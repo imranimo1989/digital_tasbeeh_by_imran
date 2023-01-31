@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // Import package
 import 'package:flutter_vibrate/flutter_vibrate.dart';
+import 'package:flutter/services.dart';
 
 
 void main() {
@@ -259,7 +260,7 @@ class _CounterDashState extends State<CounterDash> {
 
                     tasbihName = "SUBHANALLAH";
 
-                    if(count1==33||count1==100){
+                    if(count1==32||count1==99||totalCount==99){
                       await Vibrate.vibrate();
                     }
                     setState(() {
@@ -294,7 +295,7 @@ class _CounterDashState extends State<CounterDash> {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
                   onPressed: ()async {
-                    if(count2==33||count2==100){
+                    if(count2==32||count2==99||totalCount==99){
                       await Vibrate.vibrate();
                     }
                     tasbihName = "ALHAMDULILLAH";
@@ -330,7 +331,7 @@ class _CounterDashState extends State<CounterDash> {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
                   onPressed: ()async {
-                    if(count3==33||count3==100){
+                    if(count3==32||count3==99||totalCount==99){
                       await Vibrate.vibrate();
                     }
                     tasbihName = "ALLAHUAKBAR";
@@ -365,7 +366,9 @@ class _CounterDashState extends State<CounterDash> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
-                  onPressed: () {
+                  onPressed: () async{
+                    await Vibrate.vibrate();
+
                     tasbihName = 'Tasbeeh Counter';
                     setState(() {
                       count1 = 0;
@@ -376,6 +379,7 @@ class _CounterDashState extends State<CounterDash> {
                       allahuakbar = 0;
                       result = 0;
                       totalCount = 0;
+                      HapticFeedback.vibrate();
                     });
                   },
                   style: ElevatedButton.styleFrom(

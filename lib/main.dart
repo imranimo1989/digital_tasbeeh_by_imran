@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+// Import package
+import 'package:flutter_vibrate/flutter_vibrate.dart';
 
 
 void main() {
@@ -253,16 +255,20 @@ class _CounterDashState extends State<CounterDash> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
-                  onPressed: () {
+                  onPressed: ()async{
 
                     tasbihName = "SUBHANALLAH";
 
-
+                    if(count1==33||count1==100){
+                      await Vibrate.vibrate();
+                    }
                     setState(() {
                       count1++;
                       result = count1;
                       subhanaAllah = count1;
                       totalCount = count1 + count2 + count3;
+
+
                     });
                     alhamdulillah = count2;
                     allahuakbar = count3;
@@ -287,7 +293,10 @@ class _CounterDashState extends State<CounterDash> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
-                  onPressed: () {
+                  onPressed: ()async {
+                    if(count2==33||count2==100){
+                      await Vibrate.vibrate();
+                    }
                     tasbihName = "ALHAMDULILLAH";
 
                     //count1
@@ -320,7 +329,10 @@ class _CounterDashState extends State<CounterDash> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
-                  onPressed: () {
+                  onPressed: ()async {
+                    if(count3==33||count3==100){
+                      await Vibrate.vibrate();
+                    }
                     tasbihName = "ALLAHUAKBAR";
                     setState(() {
                       count3++;

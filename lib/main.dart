@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(const CounterApp());
 }
@@ -39,7 +40,7 @@ class _CounterDashState extends State<CounterDash> {
 
   int subhanaAllah = 0;
   int alhamdulillah = 0;
-  int laIlahaIllallah = 0;
+  int allahuakbar = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -143,10 +144,10 @@ class _CounterDashState extends State<CounterDash> {
               children: [
                 //SubhanaAllah
                 Expanded(
-                  flex: 3,
+                  flex: 1,
                   child: Card(
                     child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
                           Text(
@@ -176,10 +177,10 @@ class _CounterDashState extends State<CounterDash> {
 
                 //Alhamdulillah
                 Expanded(
-                  flex: 3,
+                  flex: 1,
                   child: Card(
                     child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
                           Text(
@@ -209,14 +210,14 @@ class _CounterDashState extends State<CounterDash> {
 
                 //La Ilaha Illah
                 Expanded(
-                  flex: 4,
+                  flex: 1,
                   child: Card(
                     child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
                           Text(
-                            laIlahaIllallah.toString(),
+                            allahuakbar.toString(),
                             style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.normal,
@@ -226,7 +227,7 @@ class _CounterDashState extends State<CounterDash> {
                           ),
                           const Text(
                             //SubhanaAllah
-                            'LA-ILAHA-ILLALLAH',
+                            'ALLAHUAKBAR',
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.normal,
@@ -253,7 +254,9 @@ class _CounterDashState extends State<CounterDash> {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
                   onPressed: () {
+
                     tasbihName = "SUBHANALLAH";
+
 
                     setState(() {
                       count1++;
@@ -262,7 +265,7 @@ class _CounterDashState extends State<CounterDash> {
                       totalCount = count1 + count2 + count3;
                     });
                     alhamdulillah = count2;
-                    laIlahaIllallah = count3;
+                    allahuakbar = count3;
                   },
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.all(20),
@@ -318,11 +321,11 @@ class _CounterDashState extends State<CounterDash> {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
                   onPressed: () {
-                    tasbihName = "LA-ILAHA-ILLALLAH";
+                    tasbihName = "ALLAHUAKBAR";
                     setState(() {
                       count3++;
                       result = count3;
-                      laIlahaIllallah = count3;
+                      allahuakbar = count3;
                       totalCount = count1 + count2 + count3;
                     });
                     subhanaAllah = count1;
@@ -333,7 +336,7 @@ class _CounterDashState extends State<CounterDash> {
                       backgroundColor: CupertinoColors.activeGreen),
                   icon: const Icon(Icons.add),
                   label: const Text(
-                    'LA-ILAHA-ILLALLAH',
+                    'ALLAHUAKBAR',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -358,7 +361,7 @@ class _CounterDashState extends State<CounterDash> {
                       count3 = 0;
                       subhanaAllah = 0;
                       alhamdulillah = 0;
-                      laIlahaIllallah = 0;
+                      allahuakbar = 0;
                       result = 0;
                       totalCount = 0;
                     });

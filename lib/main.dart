@@ -58,11 +58,13 @@ class _CounterDashState extends State<CounterDash> {
           Container(
             height: 120,
             width: double.infinity,
-            decoration: const BoxDecoration(
+            decoration:
+            const BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.fitWidth,
                     image: NetworkImage(
                         'https://t3.ftcdn.net/jpg/03/01/93/98/360_F_301939801_ENSHErMa33QF9Z0bJOJ8ZlNsVOJ3dy5h.jpg'))),
+
             child: Container(
               decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -288,7 +290,7 @@ class _CounterDashState extends State<CounterDash> {
                   )),
             ),
           ),
-
+          //Alhamdulillah
           SizedBox(
             width: double.infinity,
             child: Padding(
@@ -324,7 +326,7 @@ class _CounterDashState extends State<CounterDash> {
                   )),
             ),
           ),
-
+          //AllahuAkbar
           SizedBox(
             width: double.infinity,
             child: Padding(
@@ -401,3 +403,4 @@ class _CounterDashState extends State<CounterDash> {
     );
   }
 }
+
